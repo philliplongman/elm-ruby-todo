@@ -1,5 +1,8 @@
-module Message exposing (Message)
+module Message exposing (..)
+
+import Http
+import Model exposing (Task)
 
 
 type Message
-    = None
+  = PageLoad ( Result Http.Error ( List Task ) )

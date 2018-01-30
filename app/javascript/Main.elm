@@ -10,9 +10,14 @@ import Subscriptions exposing (..)
 
 main : Program Never Model Message
 main =
-    Html.program
-        { init = init
-        , view = view
-        , update = update
-        , subscriptions = subscriptions
-        }
+  Html.program
+    { init = init
+    , view = view
+    , update = update
+    , subscriptions = subscriptions
+    }
+
+
+init : ( Model, Cmd Message )
+init =
+  ( Model([]), getTasks )

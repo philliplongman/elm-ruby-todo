@@ -6,4 +6,4 @@ import Model exposing (Model)
 
 subscriptions : Model -> Sub Message
 subscriptions model =
-    Sub.none
+  Sub.none

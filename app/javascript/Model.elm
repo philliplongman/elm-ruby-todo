@@ -1,11 +1,11 @@
-module Model exposing (Model, init)
+module Model exposing (Model, Task)
 
-import Message exposing (Message)
 
 type alias Model =
-    {}
+  { tasks : List Task
+  }
 
 
-init : ( Model, Cmd Message )
-init =
-  ( Model, Cmd.none )
+type alias Task =
+  { body : String
+  }
